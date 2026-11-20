@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interactive map of United States presidential election results, 2000–2024.">
+<meta name="theme-color" content="#0b1220"><title>U.S. Election Map — Presidential Results</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="./"><span class="brand-mark">◎</span><span>U.S. ELECTION MAP<small>OPEN ELECTORAL DATA</small></span></a><a class="source-link" href="https://github.com/iamdatagabs/voting_project">Data & methodology ↗</a></header>
+<main>
+<section class="intro"><p class="eyebrow">PRESIDENTIAL ELECTIONS · 2000—2024</p><h1>America, <em>by the vote.</em></h1><p class="lede">Explore how the United States voted, state by state. Compare presidential margins, identify winners, and inspect the underlying vote totals.</p></section>
+<section class="control-panel" aria-label="Map controls"><label>Election year<select id="map-year"><option>2024</option><option>2020</option><option>2016</option><option>2012</option><option>2008</option><option>2004</option><option>2000</option></select></label><label>Map view<select id="map-metric"><option value="margin">Democratic − Republican margin</option><option value="winner">Winning party</option></select></label><div class="data-status" id="data-status"><span class="pulse"></span> Loading election data…</div></section>
+<section class="map-card">
+<div class="map-heading"><div><p class="eyebrow">THE ELECTORAL LANDSCAPE</p><h2 id="map-title">2024 presidential results</h2><p class="map-hint">Hover over a state to preview. Select a state to inspect its results.</p></div><div class="map-legend" id="map-legend"><span>Republican</span><div class="gradient"></div><span>Democratic</span></div></div>
+<div class="map-grid"><div class="map-stage"><svg id="election-map" viewBox="0 0 960 600" role="img" aria-label="United States presidential election results map"><text x="480" y="300" text-anchor="middle">Loading map…</text></svg><div class="tooltip" id="map-tooltip" role="status"></div></div>
+<aside class="state-card" aria-live="polite"><p class="eyebrow">STATE PROFILE</p><h3 id="state-name">United States</h3><p class="state-result" id="state-result">Select a state on the map</p><div class="stat"><span>Democratic vote share</span><strong id="dem-share">—</strong></div><div class="stat"><span>Republican vote share</span><strong id="rep-share">—</strong></div><div class="stat"><span>Margin</span><strong id="state-margin">—</strong></div><div class="stat"><span>Total votes reported</span><strong id="total-votes">—</strong></div><p class="state-note" id="state-note">Choose any state to see its presidential results for the selected election year.</p></aside></div>
+<div class="map-foot"><span><i class="swatch dem"></i> Democratic</span><span><i class="swatch rep"></i> Republican</span><span><i class="swatch neutral"></i> No data / tie</span><span class="foot-note">Color intensity represents margin magnitude.</span></div>
+</section>
+<section class="method"><div><p class="eyebrow">HOW TO READ THIS MAP</p><h2>Margin, not just winner.</h2></div><p>Margin is calculated as (Democratic votes − Republican votes) ÷ total reported votes × 100. Positive values indicate a Democratic advantage; negative values indicate a Republican advantage. The winner view shows which of the two major parties received more votes.</p></section>
+<section class="source-note"><strong>Data & limitations</strong><p>Source: MIT Election Data and Science Lab, County Presidential Election Returns, 2000–2024. State values are aggregated from county-level returns in the project's versioned dataset. Reported votes are not the same as eligible-voter turnout. Missing observations are not imputed as zero; third-party votes remain in the total-vote denominator.</p><p><a href="https://doi.org/10.7910/DVN/VOQCHQ">Original dataset · Harvard Dataverse ↗</a> · <a href="https://github.com/MEDSL/2020-elections-official">MEDSL source organization ↗</a></p></section>
+</main><footer><span>U.S. ELECTION MAP · AN OPEN RESEARCH PROJECT</span><a href="https://github.com/iamdatagabs/us-election-map">Source code ↗</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script><script src="app.js"></script>
+</body></html>
