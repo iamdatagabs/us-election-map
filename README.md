@@ -2,7 +2,7 @@
 
 An independent, interactive choropleth map of U.S. presidential election results from 2000 through 2024.
 
-**Live site:** https://iamdatagabs.github.io/us-election-map/
+**Live site:** https://iamdatagabs.github.io/us-election-map/ · **Portfolio:** https://iamdatagabs.github.io/iamdatagabs/portfolio/
 
 ## Features
 - Presidential election cycles: 2000, 2004, 2008, 2012, 2016, 2020 and 2024.
@@ -26,7 +26,7 @@ Map geometry: [US Atlas](https://github.com/topojson/us-atlas). Rendering: [D3.j
 Serve the repository root over HTTP (for example, `python -m http.server 8000`) and open `http://localhost:8000`. The data file is loaded from `data/presidential-timeseries.json`.
 
 ## Deployment
-GitHub Actions publishes the repository root to GitHub Pages on pushes to `main). In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source if Pages is not already enabled.
+GitHub Actions publishes the repository root to GitHub Pages on pushes to `main`. In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source if Pages is not already enabled.
 
 ## License
 The MIT Election Lab source dataset is CC0 1.0. The application code in this repository is MIT licensed.
